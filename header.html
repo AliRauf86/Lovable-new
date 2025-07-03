@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - PROTEACH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600">PROTEACH</div>
+                    <div class="hidden sm:block ml-2 text-sm text-gray-600">ITSM Training&Consulting</div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-blue-600 transition-colors">Ana Səhifə</a>
+                    <a href="#services" class="text-gray-900 hover:text-blue-600 transition-colors">Xidmətlər</a>
+                    <a href="#about" class="text-gray-900 hover:text-blue-600 transition-colors">Haqqımızda</a>
+                    <a href="#blog" class="text-gray-900 hover:text-blue-600 transition-colors">Məqalələr</a>
+                    <a href="#contact" class="text-gray-900 hover:text-blue-600 transition-colors">Əlaqə</a>
+                </nav>
+
+                <button class="md:hidden p-2" onclick="toggleMenu()">
+                    <i class="fas fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+                <nav class="py-4 space-y-2">
+                    <a href="#home" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Ana Səhifə</a>
+                    <a href="#services" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Xidmətlər</a>
+                    <a href="#about" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Haqqımızda</a>
+                    <a href="#blog" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Məqalələr</a>
+                    <a href="#contact" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Əlaqə</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fas fa-times';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fas fa-bars';
+            }
+        }
+    </script>
+</body>
+</html>

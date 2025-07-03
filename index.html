@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTEACH - ITSM Training & Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600">PROTEACH</div>
+                    <div class="hidden sm:block ml-2 text-sm text-gray-600">ITSM Training&Consulting</div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-blue-600 transition-colors">Ana Səhifə</a>
+                    <a href="#services" class="text-gray-900 hover:text-blue-600 transition-colors">Xidmətlər</a>
+                    <a href="#about" class="text-gray-900 hover:text-blue-600 transition-colors">Haqqımızda</a>
+                    <a href="#blog" class="text-gray-900 hover:text-blue-600 transition-colors">Məqalələr</a>
+                    <a href="#contact" class="text-gray-900 hover:text-blue-600 transition-colors">Əlaqə</a>
+                </nav>
+
+                <button class="md:hidden p-2" onclick="toggleMenu()">
+                    <i class="fas fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+                <nav class="py-4 space-y-2">
+                    <a href="#home" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Ana Səhifə</a>
+                    <a href="#services" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Xidmətlər</a>
+                    <a href="#about" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Haqqımızda</a>
+                    <a href="#blog" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Məqalələr</a>
+                    <a href="#contact" class="block px-4 py-2 text-gray-900 hover:bg-blue-50">Əlaqə</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                        <span class="text-blue-600">PROTEACH</span>
+                        <br>
+                        ITSM Training & Consulting
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        ITSM sahəsində peşəkar konsultasiya və təlim xidmətləri ilə biznesinizi irəliyə aparın. 
+                        Beynəlxalq standartlara uyğun həllər və ekspert dəstəyi.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md text-lg font-medium flex items-center justify-center transition-colors">
+                            Konsultasiya al
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <button class="border border-gray-300 hover:bg-gray-50 text-gray-900 px-8 py-3 rounded-md text-lg font-medium transition-colors">
+                            Kursları gör
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+                        alt="Professional ITSM consulting"
+                        class="rounded-lg shadow-2xl w-full"
+                    >
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex space-x-2">
+                                <i class="fas fa-award text-blue-600 text-2xl"></i>
+                                <i class="fas fa-users text-green-600 text-2xl"></i>
+                                <i class="fas fa-book-open text-purple-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">500+ Məzun</p>
+                                <p class="text-sm text-gray-600">Uğurlu sertifikatlaşma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Xidmətlərimiz
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    ITSM sahəsində geniş təcrübəmizlə biznesinizin ehtiyaclarına uyğun həllər təqdim edirik
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-cogs text-blue-600 text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">ITSM Konsultasiya</h3>
+                        <p class="text-gray-600 mb-4">Biznesiniz üçün ən uyğun ITSM həllərini təqdim edirik</p>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">ITIL implementasiyası</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Proses optimallaşdırması</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Texnoloji həllər</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Dəyişiklik idarəetməsi</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-graduation-cap text-green-600 text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">ITSM Təlimləri</h3>
+                        <p class="text-gray-600 mb-4">Beynəlxalq sertifikatlar üçün peşəkar təlim proqramları</p>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">ITIL Foundation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">ITIL Managing Professional</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">ITIL Strategic Leader</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Service Management</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-users text-purple-600 text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Korporativ Təlim</h3>
+                        <p class="text-gray-600 mb-4">Şirkət əməkdaşları üçün xüsusi hazırlanmış təlim proqramları</p>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Komanda təlimi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Xüsusi kurikulum</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Praktiki təcrübə</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Davamlı dəstək</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Haqqımızda
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        PROTEACH olaraq, ITSM sahəsində 10 ildən çox təcrübəyə malik peşəkar komandayıq. 
+                        Beynəlxalq standartlara uyğun yüksək keyfiyyətli təlim və konsultasiya xidmətləri təqdim edirik.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Məqsədimiz müasir texnologiyalar və ən yaxşı təcrübələrlə təchiz olunmuş mütəxəssislər 
+                        yetişdirmək və şirkətlərin ITSM proseslərini optimallaşdırmaqdır.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <i class="fas fa-users text-blue-600 text-2xl mb-2"></i>
+                            <div class="text-2xl font-bold text-gray-900">500+</div>
+                            <div class="text-sm text-gray-600">Məzun</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-award text-blue-600 text-2xl mb-2"></i>
+                            <div class="text-2xl font-bold text-gray-900">50+</div>
+                            <div class="text-sm text-gray-600">Sertifikat</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-bullseye text-blue-600 text-2xl mb-2"></i>
+                            <div class="text-2xl font-bold text-gray-900">100+</div>
+                            <div class="text-sm text-gray-600">Layihə</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-blue-600 text-2xl mb-2"></i>
+                            <div class="text-2xl font-bold text-gray-900">98%</div>
+                            <div class="text-sm text-gray-600">Müvəffəqiyyət</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="ITSM training session"
+                        class="rounded-lg shadow-xl w-full"
+                    >
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg">
+                        <p class="font-semibold">Sertifikatlaşdırılmış Təlimçilər</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Son Məqalələr
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    ITSM sahəsindəki ən son yeniliklər və təcrübələr haqqında məqalələrimizi oxuyun
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="ITIL 4 yeniliklər və faydaları"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-2">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">ITIL</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar mr-1"></i>
+                                15 Dekabr 2024
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold hover:text-blue-600 transition-colors mb-2">
+                            ITIL 4 yeniliklər və faydaları
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            ITIL 4-ün gətirdiyi yeniliklər və biznes proseslərinə təsiri haqqında ətraflı məlumat.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-user mr-1"></i>
+                                PROTEACH Komandası
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center">
+                                Oxu
+                                <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Service Management ən yaxşı təcrübələr"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-2">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Service Management</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar mr-1"></i>
+                                10 Dekabr 2024
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold hover:text-blue-600 transition-colors mb-2">
+                            Service Management ən yaxşı təcrübələr
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Müasir Service Management metodologiyalarının praktiki tətbiqi və faydaları.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-user mr-1"></i>
+                                PROTEACH Komandası
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center">
+                                Oxu
+                                <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="ITSM transformasiyasında uğur faktorları"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-2">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Transformasiya</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar mr-1"></i>
+                                5 Dekabr 2024
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold hover:text-blue-600 transition-colors mb-2">
+                            ITSM transformasiyasında uğur faktorları
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Şirkətlərdə ITSM transformasiyasının uğurla həyata keçirilməsi üçün əsas addımlar.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-user mr-1"></i>
+                                PROTEACH Komandası
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center">
+                                Oxu
+                                <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="border border-gray-300 hover:bg-gray-50 text-gray-900 px-8 py-3 rounded-md text-lg font-medium transition-colors">
+                    Bütün məqalələr
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold text-blue-400 mb-4">PROTEACH</div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        ITSM sahəsində peşəkar konsultasiya və təlim xidmətləri ilə biznesinizi irəliyə aparın. 
+                        Beynəlxalq standartlara uyğun həllər və ekspert dəstəyi.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="bg-blue-600 p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="bg-blue-600 p-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Xidmətlər</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">ITSM Konsultasiya</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">ITIL Təlimləri</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Korporativ Təlim</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Sertifikatlaşma</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Əlaqə</h3>
+                    <div class="space-y-3 text-gray-300">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span>info@proteach.az</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-3"></i>
+                            <span>+994 55 123 45 67</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i>
+                            <span>Bakı, Azərbaycan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 PROTEACH. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fas fa-times';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fas fa-bars';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
