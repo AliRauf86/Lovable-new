@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biziml? ?laq? - TechConsult</title>
+    <title>Bizimlə Əlaqə</title>
     <style>
         * {
             margin: 0;
@@ -87,7 +87,7 @@
         }
         
         .contact-item::before {
-            content: '�';
+            content: '•';
             color: #3498db;
             font-weight: bold;
             font-size: 1.2em;
@@ -222,8 +222,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Biziml? ?laq?</h1>
-            <p>Layih?nizi m�zakir? etm?k v? siz? uygun h?ll?ri k?sf etm?k ���n biz? m�raci?t edin</p>
+            <h1>Bizimlə Əlaqə</h1>
+            <p>Layihənizi müzakirə etmək və sizə uygun həlləri kəşf etmək üçün bizə müraciət edin</p>
         </div>
         
         <div class="content">
@@ -236,22 +236,22 @@
                 
                 <div class="contact-section">
                     <h3>E-mail</h3>
-                    <div class="contact-item">info@techconsult.az</div>
-                    <div class="contact-item">training@techconsult.az</div>
+                    <div class="contact-item">info@proteach.az</div>
+                    <div class="contact-item">training@proteach.az</div>
                 </div>
                 
                 <div class="contact-section">
-                    <h3>�nvan</h3>
-                    <div class="contact-item">Baki s?h?ri, N?simi rayonu<br>Azadliq prospekti 12, M?rt?b? 5</div>
+                    <h3>Ünvan</h3>
+                    <div class="contact-item">Bakı şəhəri, Nəsimi rayonu<br>Azadliq prospekti 12, Mərtəbə 5</div>
                 </div>
             </div>
             
             <div class="form-section">
-                <h2 class="form-title">Mesaj G�nd?rin</h2>
-                <p class="form-subtitle">Suallarinizi v? ya layih? t?klifl?rinizi biz? g�nd?rin</p>
+                <h2 class="form-title">Mesaj Göndərin</h2>
+                <p class="form-subtitle">Suallarınızı və ya layihə təkliflərinizi bizə göndərin</p>
                 
                 <div class="success-message" id="successMessage">
-                    Mesajiniz ugurla g�nd?rildi! Tezlikl? sizinl? ?laq? saxlayacagiq.
+                    Mesajınız uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.
                 </div>
                 
                 <form id="contactForm">
@@ -262,7 +262,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="company">Sirk?t</label>
+                            <label for="company">Şirkət</label>
                             <input type="text" id="company" name="company">
                         </div>
                     </div>
@@ -273,22 +273,22 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="subject">M�vzu</label>
+                        <label for="subject">Mövzu</label>
                         <select id="subject" name="subject" required>
-                            <option value="">M�vzu se�in</option>
+                            <option value="">Mövzu seçin</option>
                             <option value="it-konsultasiya">IT Konsultasiya</option>
-                            <option value="korporativ-teliml?r">Korporativ T?liml?r</option>
-                            <option value="online-telim">Online T?lim Platformasi</option>
-                            <option value="diger">Dig?r</option>
+                            <option value="korporativ-teliml?r">Korporativ Təlimlər</option>
+                            <option value="online-telim">Online Təlim Platforması</option>
+                            <option value="diger">Digər</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="message">Mesaj</label>
-                        <textarea id="message" name="message" placeholder="Mesajinizi buraya yazin..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">Mesaj G�nd?r</button>
+                    <button type="submit" class="submit-btn">Mesaj Göndər</button>
                 </form>
             </div>
         </div>
@@ -305,30 +305,30 @@
             const message = document.getElementById('message').value;
             
             if (!name || !email || !subject || !message) {
-                alert('Z?hm?t olmasa b�t�n vacib sah?l?ri doldurun.');
+                alert('Zəhmət olmasa bütün vacib sahələri doldurun.');
                 return;
             }
             
             // E-mail validasiyasi
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert('Z?hm?t olmasa d�zg�n e-mail �nvani daxil edin.');
+                alert('Zəhmət olmasa düzgün e-mail ünvani daxil edin.');
                 return;
             }
             
-            // Ugurlu mesaj g�st?r
+            // Ugurlu mesaj göstər
             document.getElementById('successMessage').style.display = 'block';
             
-            // Formu sifirla
+            // Formu sıfırla
             this.reset();
             
-            // Ugurlu mesaji 5 saniy? sonra gizl?t
+            // Uğurlu mesajı 5 saniyə sonra gizlət
             setTimeout(() => {
                 document.getElementById('successMessage').style.display = 'none';
             }, 5000);
             
-            // Burada real h?yatda formu server? g�nd?r?c?ksiniz
-            console.log('Form m?lumatlari:', {
+            // Burada real həyatda formu serverə göndərəcəksiniz
+            console.log('Form məlumatları:', {
                 name: name,
                 email: email,
                 subject: subject,
