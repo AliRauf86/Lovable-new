@@ -381,7 +381,147 @@
         </div>
     </section>
 
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Bizimlə Əlaqə
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Layihənizi müzakirə etmək və sizə uygun həlləri kəşf etmək üçün bizə müraciət edin
+                </p>
+            </div>
+            
+            <div class="container">
+        <div class="header">
+            <h1>Bizimlə Əlaqə</h1>
+            <p>Layihənizi müzakirə etmək və sizə uygun həlləri kəşf etmək üçün bizə müraciət edin</p>
+        </div>
+        
+        <div class="content">
+            <div class="contact-info">
+                <div class="contact-section">
+                    <h3>Telefon</h3>
+                    <div class="contact-item">+994 50 123 45 67</div>
+                    <div class="contact-item">+994 12 456 78 90</div>
+                </div>
+                
+                <div class="contact-section">
+                    <h3>E-mail</h3>
+                    <div class="contact-item">info@proteach.az</div>
+                    <div class="contact-item">training@proteach.az</div>
+                </div>
+                
+                <div class="contact-section">
+                    <h3>Ünvan</h3>
+                    <div class="contact-item">Bakı şəhəri, Nəsimi rayonu<br>Azadliq prospekti 12, Mərtəbə 5</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2 class="form-title">Mesaj Göndərin</h2>
+                <p class="form-subtitle">Suallarınızı və ya layihə təkliflərinizi bizə göndərin</p>
+                
+                <div class="success-message" id="successMessage">
+                    Mesajınız uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ad Soyad</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Şirkət</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Mövzu</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Mövzu seçin</option>
+                            <option value="it-konsultasiya">IT Konsultasiya</option>
+                            <option value="korporativ-teliml?r">Korporativ Təlimlər</option>
+                            <option value="online-telim">Online Təlim Platforması</option>
+                            <option value="diger">Digər</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mesaj</label>
+                        <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Mesaj Göndər</button>
+                </form>
+            </div>
+        </div>
+    </div>
     
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Form validasiyasi
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !subject || !message) {
+                alert('Zəhmət olmasa bütün vacib sahələri doldurun.');
+                return;
+            }
+            
+            // E-mail validasiyasi
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Zəhmət olmasa düzgün e-mail ünvani daxil edin.');
+                return;
+            }
+            
+            // Ugurlu mesaj göstər
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Formu sıfırla
+            this.reset();
+            
+            // Uğurlu mesajı 5 saniyə sonra gizlət
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+            
+            // Burada real həyatda formu serverə göndərəcəksiniz
+            console.log('Form məlumatları:', {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            });
+        });
+        
+        // Input animasiyalari
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+            
     <!-- Footer -->
     <footer id="footer" class="bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
