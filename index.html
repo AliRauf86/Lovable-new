@@ -383,50 +383,178 @@
 
     <!-- Contact -->
     
+    <style>
+    .contact-container {
+        display: flex;
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    .contact-info {
+        flex: 1;
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .contact-info h3 {
+        margin-top: 0;
+        color: #1a73e8;
+        font-size: 1.5em;
+    }
+    .contact-info p {
+        margin: 10px 0;
+        font-size: 1em;
+        color: #333;
+        line-height: 1.6;
+    }
+    .contact-info i {
+        margin-right: 10px;
+        color: #1a73e8;
+    }
+    .contact-form {
+        flex: 2;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .contact-form h2 {
+        text-align: center;
+        color: #1a73e8;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        font-size: 1em;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 8px rgba(26, 115, 232, 0.2);
+        outline: none;
+    }
+    .form-group textarea {
+        resize: vertical;
+        height: 120px;
+    }
+    .form-group select {
+        appearance: none;
+        background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+        background-size: 20px;
+    }
+    .form-group input[type="submit"] {
+        background: linear-gradient(90deg, #1a73e8, #0d47a1);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .form-group input[type="submit"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    #successMessage {
+        display: none;
+        background: #e8f5e9;
+        color: #2e7d32;
+        padding: 12px;
+        border-radius: 6px;
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+        border: 1px solid #2e7d32;
+        animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+        }
+        .contact-info, .contact-form {
+            flex: none;
+            width: 100%;
+        }
+    }
+</style>
+<div class="contact-container">
+    <div class="contact-info">
+        <h3>PROTEACH Əlaqə</h3>
+        <p><i class="fas fa-phone"></i>Telefon: +994 50 123 45 67</p>
+        <p><i class="fas fa-envelope"></i>E-poçt: rauf.aliyev@proteach.az</p>
+        <p><i class="fas fa-map-marker-alt"></i>Ünvan: Bakı şəhəri, Nəsimi rayonu, 28 May küçəsi 123</p>
+    </div>
     <form action="https://formspree.io/f/xanjrvlj" method="POST" id="contactForm">
-    <div class="form-group">
-        <label for="name">Ad:</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-        <label for="surname">Soyad:</label>
-        <input type="text" id="surname" name="surname" required>
-    </div>
-    <div class="form-group">
-        <label for="company">Şirkət:</label>
-        <input type="text" id="company" name="company">
-    </div>
-    <div class="form-group">
-        <label for="phone">Telefon nömrəsi:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,12}" placeholder="994501234567">
-    </div>
-    <div class="form-group">
-        <label for="email">E-poçt:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="subject">Mövzu:</label>
-        <select id="subject" name="subject" required>
-            <option value="" disabled selected>Mövzu seçin</option>
-            <option value="it_konsultasiya">İT konsultasiya</option>
-            <option value="telimler">Təlimlər</option>
-            <option value="online">Online</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="message">Mesaj:</label>
-        <textarea id="message" name="message" required></textarea>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Göndər">
-    </div>
-    <div id="successMessage" style="display: none; color: green; text-align: center; margin-top: 10px;">
-        Mesajınız göndərildi, sizinlə tezliklə əlaqə saxlanılacaqdır
-    </div>
-</form>
+        <h2>Bizimlə Əlaqə</h2>
+        <div class="form-group">
+            <label for="name">Ad:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Soyad:</label>
+            <input type="text" id="surname" name="surname" required>
+        </div>
+        <div class="form-group">
+            <label for="company">Şirkət:</label>
+            <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefon nömrəsi:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,12}" placeholder="994501234567">
+        </div>
+        <div class="form-group">
+            <label for="email">E-poçt:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Mövzu:</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Mövzu seçin</option>
+                <option value="it_konsultasiya">İT konsultasiya</option>
+                <option value="telimler">Təlimlər</option>
+                <option value="online">Online</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Göndər">
+        </div>
+        <div id="successMessage">
+            Mesajınız göndərildi, sizinlə tezliklə əlaqə saxlanılacaqdır
+        </div>
+    </form>
+</div>
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Forma göndərilməsinin default davranışını dayandırır
+        event.preventDefault();
         const form = this;
         const formData = new FormData(form);
 
@@ -440,10 +568,10 @@
             if (response.ok) {
                 const successMessage = document.getElementById('successMessage');
                 successMessage.style.display = 'block';
-                form.reset(); // Formanı təmizləyir
+                form.reset();
                 setTimeout(() => {
                     successMessage.style.display = 'none';
-                }, 10000); // 10 saniyə sonra mesaj itir
+                }, 10000);
             } else {
                 alert('Mesaj göndərilərkən xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
             }
