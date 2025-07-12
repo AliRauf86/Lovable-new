@@ -386,7 +386,7 @@
     <style>
     .contact-container {
         display: flex;
-        gap: 24px;
+        gap: 32px;
         width: 100%;
         max-width: 1400px;
         margin: 20px auto;
@@ -396,7 +396,7 @@
     }
     .contact-info {
         flex: 1;
-        max-width: 50%; /* Bərabər bölünmə üçün */
+        max-width: 50%;
         background: white;
         padding: 24px;
         border-radius: 12px;
@@ -411,7 +411,7 @@
         align-items: center;
     }
     .contact-info p:first-child {
-        margin-top: 24px; /* İkinci sətrdən başlamaq üçün */
+        margin-top: 24px;
     }
     .contact-info i {
         margin-right: 8px;
@@ -420,9 +420,9 @@
     }
     .contact-form {
         flex: 1;
-        max-width: 50%; /* Bərabər bölünmə üçün */
+        max-width: 50%;
         background: white;
-        padding: 24px;
+        padding: 32px; /* Daha geniş padding */
         border-radius: 12px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
@@ -430,9 +430,10 @@
         text-align: center;
         color: #1a1a1a;
         margin-bottom: 8px;
-        font-size: 2.25em; /* Böyük başlıq */
+        font-size: 2.5em; /* Böyük və qalın başlıq */
         font-weight: 700;
         line-height: 1.2;
+        letter-spacing: -0.02em;
     }
     .contact-form .subtitle {
         text-align: center;
@@ -443,10 +444,11 @@
     .form-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 16px; /* Xanalar arasında optimal boşluq */
+        gap: 24px; /* Xanalar arasında daha geniş boşluq */
+        margin-bottom: 16px;
     }
     .form-group {
-        margin-bottom: 12px; /* Sətrlər arası məsafəni azaltmaq */
+        margin-bottom: 12px;
     }
     .form-group:first-child {
         margin-top: 16px; /* Ad xanasını başlıqdan ayırmaq */
@@ -458,14 +460,14 @@
         display: block;
         margin-bottom: 4px;
         font-size: 0.85em;
-        font-weight: 500;
+        font-weight: 600; /* Qalın etiketlər */
         color: #4a4a4a;
     }
     .form-group input,
     .form-group textarea,
     .form-group select {
         width: 100%;
-        padding: 12px;
+        padding: 14px; /* Daha geniş padding */
         border: 1px solid #e5e7eb;
         border-radius: 8px;
         font-size: 0.95em;
@@ -501,7 +503,7 @@
         background: #6366f1;
         color: white;
         border: none;
-        padding: 12px;
+        padding: 14px;
         border-radius: 8px;
         cursor: pointer;
         font-size: 0.95em;
