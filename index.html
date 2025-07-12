@@ -386,130 +386,143 @@
     <style>
     .contact-container {
         display: flex;
-        gap: 30px;
-        max-width: 1200px; /* Daha geniş konteyner */
-        width: 90%; /* Səhifənin 90%-ni əhatə edir */
+        gap: 24px;
+        width: 100%; /* Səhifənin tam eninə uyğunlaşır */
+        max-width: 1400px; /* Maksimum en məhdudiyyəti */
         margin: 20px auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-        background: #f4f4f4; /* Fon rəngi boşluqları daha az nəzərə çarpdırır */
-        border-radius: 12px;
+        padding: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #fafafa; /* Lovable.dev-dəki kimi yumşaq fon */
     }
     .contact-info {
         flex: 1;
-        background: #f8f9fa;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
     .contact-info h3 {
         margin-top: 0;
-        color: #1a73e8;
+        color: #1a1a1a;
         font-size: 1.5em;
+        font-weight: 600;
     }
     .contact-info p {
-        margin: 10px 0;
+        margin: 12px 0;
         font-size: 1em;
-        color: #333;
+        color: #4a4a4a;
         line-height: 1.6;
     }
     .contact-info i {
-        margin-right: 10px;
-        color: #1a73e8;
+        margin-right: 8px;
+        color: #6366f1; /* Lovable.dev-in pastel-mavi çaları */
     }
     .contact-form {
         flex: 2;
         background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
     .contact-form h2 {
         text-align: center;
-        color: #1a73e8;
-        margin-bottom: 20px;
-        font-size: 1.8em;
+        color: #1a1a1a;
+        margin-bottom: 24px;
+        font-size: 1.75em;
+        font-weight: 600;
     }
     .form-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* İki sütunlu şəbəkə */
-        gap: 20px;
-        margin-bottom: 20px;
+        grid-template-columns: 1fr 1fr; /* İki sütunlu düzüm */
+        gap: 16px;
+        margin-bottom: 16px;
     }
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
     .form-group.full-width {
         grid-column: 1 / -1; /* Tam eni əhatə edir */
     }
     .form-group label {
         display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: #333;
+        margin-bottom: 6px;
+        font-size: 0.9em;
+        font-weight: 500;
+        color: #4a4a4a;
     }
     .form-group input,
     .form-group textarea,
     .form-group select {
         width: 100%;
         padding: 12px;
-        border: 2px solid #ddd;
-        border-radius: 6px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
         font-size: 1em;
-        transition: border-color 0.3s, box-shadow 0.3s;
+        color: #1a1a1a;
+        background: #f9fafb;
+        transition: border-color 0.2s, box-shadow 0.2s;
         box-sizing: border-box;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder,
+    .form-group select:invalid {
+        color: #9ca3af; /* Oxunaqlı placeholder rəngi */
+        font-style: italic;
     }
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
-        border-color: #1a73e8;
-        box-shadow: 0 0 8px rgba(26, 115, 232, 0.2);
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         outline: none;
     }
     .form-group textarea {
         resize: vertical;
-        height: 120px;
+        height: 100px;
     }
     .form-group select {
         appearance: none;
-        background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
-        background-size: 20px;
+        background: url('data:image/svg+xml;utf8,<svg fill="black" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+        background-size: 16px;
+        background-color: #f9fafb;
     }
     .form-group input[type="submit"] {
-        background: linear-gradient(90deg, #1a73e8, #0d47a1);
+        background: #6366f1; /* Lovable.dev-in pastel-mavi düyməsi */
         color: white;
         border: none;
         padding: 12px;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
-        font-size: 1.1em;
-        transition: transform 0.2s, box-shadow 0.2s;
-        width: 100%; /* Düymə tam eni əhatə edir */
+        font-size: 1em;
+        font-weight: 500;
+        transition: background-color 0.2s, transform 0.2s;
+        width: 100%;
     }
     .form-group input[type="submit"]:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        background: #4f46e5;
+        transform: translateY(-1px);
     }
     #successMessage {
         display: none;
-        background: #e8f5e9;
-        color: #2e7d32;
+        background: #ecfdf5;
+        color: #047857;
         padding: 12px;
-        border-radius: 6px;
+        border-radius: 8px;
         text-align: center;
-        font-weight: bold;
-        border: 1px solid #2e7d32;
-        animation: fadeIn 0.5s ease-in;
+        font-size: 0.9em;
+        font-weight: 500;
+        border: 1px solid #6ee7b7;
+        animation: fadeIn 0.3s ease-in;
         grid-column: 1 / -1;
     }
     @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     @media (max-width: 768px) {
         .contact-container {
             flex-direction: column;
-            width: 95%;
+            padding: 12px;
         }
         .contact-info, .contact-form {
             flex: none;
@@ -531,27 +544,27 @@
         <h2>Bizimlə Əlaqə</h2>
         <div class="form-grid">
             <div class="form-group">
-                <label for="name">Ad:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">Ad</label>
+                <input type="text" id="name" name="name" placeholder="Adınızı daxil edin" required>
             </div>
             <div class="form-group">
-                <label for="surname">Soyad:</label>
-                <input type="text" id="surname" name="surname" required>
+                <label for="surname">Soyad</label>
+                <input type="text" id="surname" name="surname" placeholder="Soyadınızı daxil edin" required>
             </div>
             <div class="form-group">
-                <label for="company">Şirkət:</label>
-                <input type="text" id="company" name="company">
+                <label for="company">Şirkət</label>
+                <input type="text" id="company" name="company" placeholder="Şirkət adını daxil edin (ixtiyari)">
             </div>
             <div class="form-group">
-                <label for="phone">Telefon nömrəsi:</label>
+                <label for="phone">Telefon nömrəsi</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10,12}" placeholder="994501234567">
             </div>
             <div class="form-group">
-                <label for="email">E-poçt:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">E-poçt</label>
+                <input type="email" id="email" name="email" placeholder="E-poçt ünvanınızı daxil edin" required>
             </div>
             <div class="form-group">
-                <label for="subject">Mövzu:</label>
+                <label for="subject">Mövzu</label>
                 <select id="subject" name="subject" required>
                     <option value="" disabled selected>Mövzu seçin</option>
                     <option value="it_konsultasiya">İT konsultasiya</option>
@@ -560,8 +573,8 @@
                 </select>
             </div>
             <div class="form-group full-width">
-                <label for="message">Mesaj:</label>
-                <textarea id="message" name="message" required></textarea>
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın" required></textarea>
             </div>
             <div class="form-group full-width">
                 <input type="submit" value="Göndər">
