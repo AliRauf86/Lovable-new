@@ -384,249 +384,269 @@
 
     <!-- Contact -->
     
-    <style>
-    .contact-container {
-        display: flex;
-        gap: 32px;
-        width: 100%;
-        max-width: 1400px;
-        margin: 20px auto;
-        padding: 16px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background: #fafafa;
-    }
-    .contact-info {
-        flex: 1;
-        max-width: 50%;
-        background: white;
-        padding: 24px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-    .contact-info p {
-        margin: 8px 0;
-        font-size: 1em;
-        color: #4a4a4a;
-        line-height: 1.6;
-        display: flex;
-        align-items: center;
-    }
-    .contact-info p:first-child {
-        margin-top: 24px;
-    }
-    .contact-info i {
-        margin-right: 8px;
-        color: #6366f1;
-        font-size: 1.1em;
-    }
-    .contact-form {
-        flex: 1;
-        max-width: 50%;
-        background: white;
-        padding: 32px; /* Daha geniş padding */
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-    .contact-form h2 {
-        text-align: center;
-        color: #1a1a1a;
-        margin-bottom: 8px;
-        font-size: 2.5em; /* Böyük və qalın başlıq */
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-    }
-    .contact-form .subtitle {
-        text-align: center;
-        color: #4a4a4a;
-        font-size: 0.85em;
-        margin-bottom: 24px;
-    }
-    .form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px; /* Xanalar arasında daha geniş boşluq */
-        margin-bottom: 16px;
-    }
-    .form-group {
-        margin-bottom: 12px;
-    }
-    .form-group:first-child {
-        margin-top: 16px; /* Ad xanasını başlıqdan ayırmaq */
-    }
-    .form-group.full-width {
-        grid-column: 1 / -1;
-    }
-    .form-group label {
-        display: block;
-        margin-bottom: 4px;
-        font-size: 0.85em;
-        font-weight: 600; /* Qalın etiketlər */
-        color: #4a4a4a;
-    }
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-        width: 100%;
-        padding: 14px; /* Daha geniş padding */
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        font-size: 0.95em;
-        color: #1a1a1a;
-        background: #f9fafb;
-        transition: border-color 0.2s, box-shadow 0.2s;
-        box-sizing: border-box;
-    }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder,
-    .form-group select:invalid {
-        color: #9ca3af;
-        font-style: italic;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-        border-color: #6366f1;
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        outline: none;
-    }
-    .form-group textarea {
-        resize: vertical;
-        height: 100px;
-    }
-    .form-group select {
-        appearance: none;
-        background: url('data:image/svg+xml;utf8,<svg fill="black" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
-        background-size: 16px;
-        background-color: #f9fafb;
-    }
-    .form-group input[type="submit"] {
-        background: #6366f1;
-        color: white;
-        border: none;
-        padding: 14px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 0.95em;
-        font-weight: 500;
-        transition: background-color 0.2s, transform 0.2s;
-        width: 100%;
-    }
-    .form-group input[type="submit"]:hover {
-        background: #4f46e5;
-        transform: translateY(-1px);
-    }
-    #successMessage {
-        display: none;
-        background: #ecfdf5;
-        color: #047857;
-        padding: 12px;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 0.85em;
-        font-weight: 500;
-        border: 1px solid #6ee7b7;
-        animation: fadeIn 0.3s ease-in;
-        grid-column: 1 / -1;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-        .contact-container {
-            flex-direction: column;
-            padding: 12px;
-        }
-        .contact-info, .contact-form {
-            flex: none;
-            max-width: 100%;
-        }
-        .form-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-<div class="contact-container">
-    <div class="contact-info">
-        <p><i class="fas fa-phone"></i>+994 50 123 45 67</p>
-        <p><i class="fas fa-envelope"></i>rauf.aliyev@proteach.az</p>
-        <p><i class="fas fa-map-marker-alt"></i>Bakı şəhəri, Nəsimi rayonu, 28 May küçəsi 123</p>
-    </div>
-    <form action="https://formspree.io/f/xanjrvlj" method="POST" id="contactForm">
-        <h2>Mesaj Göndərin</h2>
-        <div class="subtitle">Suallarınızı və ya layihə təkliflərinizi bizə göndərin</div>
-        <div class="form-grid">
-            <div class="form-group">
-                <label for="name">Ad</label>
-                <input type="text" id="name" name="name" placeholder="Adınızı daxil edin" required>
-            </div>
-            <div class="form-group">
-                <label for="surname">Soyad</label>
-                <input type="text" id="surname" name="surname" placeholder="Soyadınızı daxil edin" required>
-            </div>
-            <div class="form-group">
-                <label for="company">Şirkət</label>
-                <input type="text" id="company" name="company" placeholder="Şirkət adını daxil edin (ixtiyari)">
-            </div>
-            <div class="form-group">
-                <label for="phone">Telefon nömrəsi</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,12}" placeholder="994501234567">
-            </div>
-            <div class="form-group">
-                <label for="email">E-poçt</label>
-                <input type="email" id="email" name="email" placeholder="E-poçt ünvanınızı daxil edin" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Mövzu</label>
-                <select id="subject" name="subject" required>
-                    <option value="" disabled selected>Mövzu seçin</option>
-                    <option value="it_konsultasiya">İT konsultasiya</option>
-                    <option value="telimler">Təlimlər</option>
-                    <option value="online">Online</option>
-                </select>
-            </div>
-            <div class="form-group full-width">
-                <label for="message">Mesaj</label>
-                <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın" required></textarea>
-            </div>
-            <div class="form-group full-width">
-                <input type="submit" value="Göndər">
-            </div>
-            <div id="successMessage">
-                Mesajınız göndərildi, sizinlə tezliklə əlaqə saxlanılacaqdır
-            </div>
-        </div>
-    </form>
-</div>
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const form = this;
-        const formData = new FormData(form);
+    import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
-        fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                const successMessage = document.getElementById('successMessage');
-                successMessage.style.display = 'block';
-                form.reset();
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 10000);
-            } else {
-                alert('Mesaj göndərilərkən xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
-            }
-        }).catch(error => {
-            alert('Xəta: ' + error.message);
-        });
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
+
+const ContactForm = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubjectChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      subject: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    toast({
+      title: "Mesaj göndərildi!",
+      description: "Tezliklə sizinlə əlaqə saxlayacağıq.",
     });
-</script>
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    });
+    setIsSubmitting(false);
+  };
+
+  return (
+    <section className="py-16 px-4 bg-background">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Bizimlə Əlaqə
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Suallarınız var? Bizə yazın və tezliklə cavab verərik.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">
+                Əlaqə Məlumatları
+              </h3>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 group">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Telefon</p>
+                    <p className="text-muted-foreground">+994 12 345 67 89</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 group">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Email</p>
+                    <p className="text-muted-foreground">info@example.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 group">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Ünvan</p>
+                    <p className="text-muted-foreground">Bakı şəhəri, Azərbaycan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative element */}
+            <div className="hidden lg:block">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl"></div>
+                <div className="relative bg-card border rounded-2xl p-8">
+                  <h4 className="text-lg font-semibold text-foreground mb-4">
+                    İş Saatları
+                  </h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">B.e - Cümə</span>
+                      <span className="text-foreground">09:00 - 18:00</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Şənbə</span>
+                      <span className="text-foreground">10:00 - 16:00</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Bazar</span>
+                      <span className="text-foreground">Bağlı</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl blur-3xl"></div>
+            <div className="relative bg-card border rounded-3xl p-8 shadow-lg">
+              <div className="mb-8 text-center">
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  Mesaj Göndərin
+                </h3>
+                <p className="text-muted-foreground">
+                  Suallarınızı və ya layihə təkliflərinizi bizə göndərin
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-foreground font-medium">
+                      Ad Soyad *
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="h-12 border-2 focus:border-primary transition-colors"
+                      placeholder="Adınızı daxil edin"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="phone" className="text-foreground font-medium">
+                      Telefon
+                    </Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="h-12 border-2 focus:border-primary transition-colors"
+                      placeholder="+994 XX XXX XX XX"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-foreground font-medium">
+                    Email *
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="h-12 border-2 focus:border-primary transition-colors"
+                    placeholder="email@example.com"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="subject" className="text-foreground font-medium">
+                    Mövzu *
+                  </Label>
+                  <Select value={formData.subject} onValueChange={handleSubjectChange} required>
+                    <SelectTrigger className="h-12 border-2 focus:border-primary transition-colors">
+                      <SelectValue placeholder="Mövzu seçin" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="it-konsultasiya">İT Konsultasiya</SelectItem>
+                      <SelectItem value="korporativ-telimlər">Korporativ təlimlər</SelectItem>
+                      <SelectItem value="online-tedris">Online tədris</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-foreground font-medium">
+                    Mesaj *
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="border-2 focus:border-primary transition-colors resize-none"
+                    placeholder="Mesajınızı buraya yazın..."
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-[1.02] disabled:scale-100"
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center space-x-2">
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <span>Göndərilir...</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center space-x-2">
+                      <Send className="w-4 h-4" />
+                      <span>Mesaj Göndər</span>
+                    </div>
+                  )}
+                </Button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
     
     <!-- Footer -->
     <footer id="footer" class="bg-gray-900 text-white">
