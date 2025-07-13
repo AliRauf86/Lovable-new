@@ -385,8 +385,10 @@
     <!-- Contact -->
     
     <!-- Contact Form Section -->
-<section class="py-16 px-4 bg-gray-50">
-  <div class="max-w-4xl mx-auto">
+<!-- Contact Form Section -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
         Bizimlə Əlaqə
@@ -396,141 +398,226 @@
       </p>
     </div>
 
-    <div class="relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl blur-3xl opacity-70"></div>
-      <div class="relative bg-white border border-gray-200 rounded-3xl p-8 shadow-lg">
-        <div class="mb-8 text-center">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">
-            Mesaj Göndərin
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <!-- Contact Info -->
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+            Əlaqə Məlumatları
           </h3>
-          <p class="text-gray-600">
-            Suallarınızı və ya layihə təkliflərinizi bizə göndərin
-          </p>
-        </div>
+          <div class="space-y-6">
+            <!-- Phone -->
+            <div class="flex items-center space-x-4 group">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium text-gray-900">Telefon</p>
+                <p class="text-gray-600">+994 12 345 67 89</p>
+              </div>
+            </div>
 
-        <!-- Success Message -->
-        <div id="successMessage" class="hidden mb-6 p-4 bg-green-100 border border-green-300 rounded-lg">
-          <div class="flex items-center">
-            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
-            <div>
-              <h4 class="text-green-800 font-medium">Mesaj göndərildi!</h4>
-              <p class="text-green-700 text-sm">Tezliklə sizinlə əlaqə saxlayacağıq.</p>
+            <!-- Email -->
+            <div class="flex items-center space-x-4 group">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium text-gray-900">Email</p>
+                <p class="text-gray-600">info@example.com</p>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-center space-x-4 group">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-medium text-gray-900">Ünvan</p>
+                <p class="text-gray-600">Bakı şəhəri, Azərbaycan</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <form id="contactForm" action="https://formspree.io/f/xanjrvlj" method="POST" class="space-y-6">
-          <div class="grid md:grid-cols-2 gap-6">
+        <!-- Business Hours -->
+        <div class="hidden lg:block">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl blur-3xl opacity-30"></div>
+            <div class="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+              <h4 class="text-lg font-semibold text-gray-900 mb-4">
+                İş Saatları
+              </h4>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span class="text-gray-600">B.e - Cümə</span>
+                  <span class="text-gray-900">09:00 - 18:00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Şənbə</span>
+                  <span class="text-gray-900">10:00 - 16:00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Bazar</span>
+                  <span class="text-gray-900">Bağlı</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl blur-3xl opacity-50"></div>
+        <div class="relative bg-white border border-gray-200 rounded-3xl p-8 shadow-xl">
+          <div class="mb-8 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Mesaj Göndərin
+            </h3>
+            <p class="text-gray-600">
+              Suallarınızı və ya layihə təkliflərinizi bizə göndərin
+            </p>
+          </div>
+
+          <!-- Success Message (Hidden by default) -->
+          <div id="success-message" class="hidden mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <p class="text-green-800 font-medium">Mesajınız göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="name" class="block text-gray-900 font-medium">
+                  Ad Soyad *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full h-12 px-4 border-2 border-gray-200 rounded-md focus:border-blue-500 focus:outline-none transition-colors"
+                  placeholder="Adınızı daxil edin"
+                >
+              </div>
+
+              <div class="space-y-2">
+                <label for="phone" class="block text-gray-900 font-medium">
+                  Telefon
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full h-12 px-4 border-2 border-gray-200 rounded-md focus:border-blue-500 focus:outline-none transition-colors"
+                  placeholder="+994 XX XXX XX XX"
+                >
+              </div>
+            </div>
+
             <div class="space-y-2">
-              <label for="name" class="block text-gray-900 font-medium">
-                Ad Soyad *
+              <label for="email" class="block text-gray-900 font-medium">
+                Email *
               </label>
               <input
-                id="name"
-                name="name"
-                type="text"
+                type="email"
+                id="email"
+                name="email"
                 required
-                class="w-full h-12 px-4 border-2 border-gray-300 rounded-md bg-white focus:border-blue-500 focus:outline-none transition-colors"
-                placeholder="Adınızı daxil edin"
-              />
+                class="w-full h-12 px-4 border-2 border-gray-200 rounded-md focus:border-blue-500 focus:outline-none transition-colors"
+                placeholder="email@example.com"
+              >
             </div>
 
             <div class="space-y-2">
-              <label for="phone" class="block text-gray-900 font-medium">
-                Telefon
+              <label for="subject" class="block text-gray-900 font-medium">
+                Mövzu *
               </label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                class="w-full h-12 px-4 border-2 border-gray-300 rounded-md bg-white focus:border-blue-500 focus:outline-none transition-colors"
-                placeholder="+994 XX XXX XX XX"
-              />
+              <select
+                id="subject"
+                name="subject"
+                required
+                class="w-full h-12 px-4 border-2 border-gray-200 rounded-md focus:border-blue-500 focus:outline-none transition-colors bg-white"
+              >
+                <option value="">Mövzu seçin</option>
+                <option value="it-konsultasiya">İT Konsultasiya</option>
+                <option value="korporativ-telimlər">Korporativ təlimlər</option>
+                <option value="online-tedris">Online tədris</option>
+              </select>
             </div>
-          </div>
 
-          <div class="space-y-2">
-            <label for="email" class="block text-gray-900 font-medium">
-              Email *
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              class="w-full h-12 px-4 border-2 border-gray-300 rounded-md bg-white focus:border-blue-500 focus:outline-none transition-colors"
-              placeholder="email@example.com"
-            />
-          </div>
+            <div class="space-y-2">
+              <label for="message" class="block text-gray-900 font-medium">
+                Mesaj *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:border-blue-500 focus:outline-none transition-colors resize-none"
+                placeholder="Mesajınızı buraya yazın..."
+              ></textarea>
+            </div>
 
-          <div class="space-y-2">
-            <label for="subject" class="block text-gray-900 font-medium">
-              Mövzu *
-            </label>
-            <select
-              id="subject"
-              name="subject"
-              required
-              class="w-full h-12 px-4 border-2 border-gray-300 rounded-md bg-white focus:border-blue-500 focus:outline-none transition-colors"
+            <button
+              type="submit"
+              class="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-200"
             >
-              <option value="">Mövzu seçin</option>
-              <option value="it-konsultasiya">İT Konsultasiya</option>
-              <option value="korporativ-telimlər">Korporativ təlimlər</option>
-              <option value="online-tedris">Online tədris</option>
-            </select>
-          </div>
-
-          <div class="space-y-2">
-            <label for="message" class="block text-gray-900 font-medium">
-              Mesaj *
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows="5"
-              class="w-full px-4 py-3 border-2 border-gray-300 rounded-md bg-white focus:border-blue-500 focus:outline-none transition-colors resize-none"
-              placeholder="Mesajınızı buraya yazın..."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            id="submitBtn"
-            class="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center space-x-2"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-            </svg>
-            <span>Mesaj Göndər</span>
-          </button>
-        </form>
+              <span class="flex items-center justify-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+                <span>Mesaj Göndər</span>
+              </span>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+// Contact form handling
+document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const form = this;
-  const submitBtn = document.getElementById('submitBtn');
-  const successMessage = document.getElementById('successMessage');
+  const formData = new FormData(form);
+  const button = form.querySelector('button[type="submit"]');
+  const successMessage = document.getElementById('success-message');
   
   // Show loading state
-  submitBtn.innerHTML = `
-    <div class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-    <span>Göndərilir...</span>
+  button.innerHTML = `
+    <span class="flex items-center justify-center space-x-2">
+      <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+      <span>Göndərilir...</span>
+    </span>
   `;
-  submitBtn.disabled = true;
+  button.disabled = true;
   
-  // Submit form data
+  // Submit to Formspree
   fetch(form.action, {
     method: 'POST',
-    body: new FormData(form),
+    body: formData,
     headers: {
       'Accept': 'application/json'
     }
@@ -539,58 +626,38 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     if (response.ok) {
       // Show success message
       successMessage.classList.remove('hidden');
-      
-      // Reset form
       form.reset();
       
-      // Reset button
-      submitBtn.innerHTML = `
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-        </svg>
-        <span>Mesaj Göndər</span>
-      `;
-      submitBtn.disabled = false;
+      // Scroll to success message
+      successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
       
-      // Hide success message after 10 seconds
+      // Hide success message after 5 seconds
       setTimeout(() => {
         successMessage.classList.add('hidden');
-      }, 10000);
-      
+      }, 5000);
     } else {
       throw new Error('Form submission failed');
     }
   })
   .catch(error => {
     console.error('Error:', error);
-    alert('Mesaj göndərilərkən xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
-    
+    alert('Mesaj göndərilmədi. Xahiş edirik təkrar cəhd edin.');
+  })
+  .finally(() => {
     // Reset button
-    submitBtn.innerHTML = `
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-      </svg>
-      <span>Mesaj Göndər</span>
+    button.innerHTML = `
+      <span class="flex items-center justify-center space-x-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+        </svg>
+        <span>Mesaj Göndər</span>
+      </span>
     `;
-    submitBtn.disabled = false;
+    button.disabled = false;
   });
 });
 </script>
 
-<style>
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-</style>
 
     
     <!-- Footer -->
