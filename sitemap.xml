@@ -5,13 +5,16 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://proteach.az/haqqimizda.html</loc>
+    <loc>https://proteach.az/about.html</loc>
   </url>
   <url>
-    <loc>https://proteach.az/xidmetler.html</loc>
+    <loc>https://proteach.az/services.html</loc>
   </url>
   <url>
-    <loc>https://proteach.az/elaqe.html</loc>
+    <loc>https://proteach.az/blog.html</loc>
+  </url>
+  <url>
+    <loc>https://proteach.az/contact.html</loc>
   </url>
 </urlset>
 
